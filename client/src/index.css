@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Seuz";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Seuz/SuezOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Secular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Secular/SecularOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Noto";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Noto/NotoSansHebrew-Regular.ttf");
+}
+@font-face {
+  font-family: "Noto light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Noto/NotoSansHebrew-Light.ttf");
+}
+@font-face {
+  font-family: "Noto bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Noto/NotoSansHebrew-Bold.ttf");
+}
+@font-face {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Fredoka/Fredoka-Regular.ttf");
+}
+@font-face {
+  font-family: "Fredoka light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Fredoka/Fredoka-Light.ttf");
+}
+@font-face {
+  font-family: "Fredoka bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Fredoka/Fredoka-Bold.ttf");
+}
+@font-face {
+  font-family: "Ibm";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Ibm/IBMPlexSansHebrew-Regular.ttf");
+}
+@font-face {
+  font-family: "Ibm light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Ibm/IBMPlexSansHebrew-Light.ttf");
+}
+@font-face {
+  font-family: "Ibm bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Ibm/IBMPlexSansHebrew-Bold.ttf");
+}
+
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  overflow-y: overlay;
+  font-family: "Quicksand";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: fit-content;
+  width: 100%;
+  background-color:#f3f3f3;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.16);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%, 0.1);
+}
+
+.btn {
+  /* border-radius: 16px; */
+  /* width: 160px;*/
+  /*background: transparent;
+  color: black;
+  font-size: 14px; */
+  
+  cursor: pointer;
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+  font-family: "Ibm bold";
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: var(--primary-orange);
+  background-color: transparent;
+  align-items: center;
+  border: 3px solid var(--primary-orange);
+  box-shadow: 1px 2px 2px 0px black;
+  width: 200px;
+  border-radius: 12px;
+  padding: 4px 0 6px;
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: white;
+  background: none;
+  transform: scale(1.04);
+}
+
+.btn:focus {
+  outline:none !important;  
+  box-shadow: none;  
+}
+
+.btn span{
+  background: var(--primary-orange);
+  height: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom:  0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.btn:hover span{
+  height: 100%;
+}
+
+.red-border {
+  border: 1px solid var(--error-message) !important;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+/* @media only screen and (max-width: 1110px){
+  /* .footer-parent{
+      display: flex;
+      align-items: flex-end;
+  } */
+  
+/*}  */
+
+.center-content div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.main-side-snepling-img{
+  position: fixed;
+  left: 20px;
+  height: 100%;  
+  width: 10%;
+  background-image: url('./assets/shadow1.png');
+  background-size: 100% 50%;
+  background-repeat:no-repeat;
+  z-index: 3;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/*IPAD PRO RESPONSIVENESS*/
+@media only screen and (max-width: 1010px) {
+  .btn {
+    width: 180px;
+  }
+}
+
+/*Animations*/
+
+@keyframes slideLeft{
+  0%{
+    transform: translateX(500px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+

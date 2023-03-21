@@ -1,0 +1,127 @@
+.header-container {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    color: var(--primary-gray);
+    z-index: 2;
+    transition: .3s;
+    background-color: var(--primary-dark-blue); 
+    box-shadow: 0 0 5px  var(--primary-dark-blue);
+}
+
+.header-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width:80%; 
+}
+
+.header-logo {
+    font-size: 30px;
+    font-family: "Secular";
+    color: var(--primary-orange);
+    display: flex;
+    flex-direction: row;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.header-option {
+    font-size: 16px;
+    font-family: "Secular";
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.header-option:hover {
+    color:white;
+}
+.header-hamburger {
+    display: none;
+}
+
+.header-option-seperator {
+    margin: 0 50px 0 0;
+}
+
+.selected-header-option, .selected-header-option:hover {
+    color: var(--primary-orange);
+}
+
+.nav-logo{
+    margin-left: 40px;
+}
+
+@media only screen and (max-width: 990px) {
+    .header-hamburger {
+        position: fixed;
+        top: 0;
+        right: 0;        
+        margin-right: 10px;
+        z-index: 1;
+        display: block;        
+    }
+
+    .header-parent {
+        justify-content: center;
+    }
+
+    .header-options {
+        display: flex;
+        flex-direction: column;        
+        
+        position: fixed;
+        left: 100%;
+        transform: translateX(100%);
+        top: 0px;
+        
+        width: 50%;
+        height:100%;
+        padding-top: 60px;
+        background: linear-gradient(var(--primary-blue) 70%, transparent 100%);
+        
+        transition: left 0.8s ease-in-out;
+        -moz-transition: left 0.8s ease-in-out;
+        -webkit-transition: left 0.8s ease-in-out;
+        -o-transition: left 0.8s ease-in-out;        
+    }
+    
+    .show-hamburger-options {
+        left: 0;
+    }
+
+    .header-option{
+        font-size: 14px;
+        margin-top: 40px !important;
+    }
+   
+    .header-option-seperator {
+        color: var(--primary-gray);
+        margin: 10px;
+        font-weight: 600;
+    }
+
+    .selected-header-option {
+        color: var(--primary-orange);
+    }
+
+    .header-hamburger-bars {
+        font-size: 26px;
+        cursor: pointer;
+        margin: 10px 10px;
+        z-index: 1200;
+        pointer-events: initial;       
+    }
+   
+    .header-hamburger-bars-active{
+        color: transparent;
+        pointer-events: none;
+    }
+}

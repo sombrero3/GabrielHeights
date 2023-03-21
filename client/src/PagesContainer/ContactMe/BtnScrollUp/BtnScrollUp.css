@@ -1,0 +1,25 @@
+.scroll-container{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.btn-scroll-up{
+    background-color: white;
+    font-size: 2rem;
+    border-radius: 50% 50% 0 0;
+    border:none;
+    border-left: 2px solid var(--secondary-gray);
+    border-top:  2px solid var(--secondary-gray);
+    box-shadow: 6px 6px 10px 0px var(--bronze);
+    z-index: 100;
+}
+
+.btn-scroll-up:hover{
+    transition: all ease 1s;
+    transform: scale(1.1);
+}
+
+.btn-scroll-up:focus{
+    outline:0 !important;
+}

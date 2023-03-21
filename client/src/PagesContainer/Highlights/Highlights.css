@@ -1,0 +1,95 @@
+.highlights-main-container{
+    height: 100vh;
+    width: 100%;
+    background-color:#f3f3f3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.highlight-blob {
+    height:10px;
+    width: 10px;
+    margin: 0 0 0 14px ;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+}
+
+.highlights-container{
+    position: relative;
+    height:100%;
+    width: 40%;
+    right:10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;        
+}
+
+.highlight {
+    font-family: "Secular";
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 28px;
+    text-align: right;
+    color: var(--primary-blue);    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.highlights-img{
+    background-image: url('../../assets/About/harness.png');
+    background-size: 100% 100%;
+    width: 50%;
+    height: 70%;
+    position: relative;
+    right:10%;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    .highlights-main-container{
+        flex-direction: column;     
+        padding: 60px 0 0;
+    }
+
+    .highlights-container{
+        right:0;
+        width: 60%;
+    }
+
+    .highlights-img{
+        right: 0;
+        /* width: 70%; */
+    }
+
+    .highlight {
+        font-size: 20px;
+        justify-content: center;        
+    }
+}
+
+@media only screen and (max-width: 600) {
+
+    .highlights-img{        
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    .highlights-container{
+        right:0;
+        width: 90%;
+    }
+
+    .highlights-img{
+        width: 90%;
+    }
+
+}

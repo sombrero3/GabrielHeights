@@ -1,0 +1,24 @@
+
+.projects-main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-bulding-img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100px;    
+    background-image: url('../../assets/blue-building.png');
+    background-size: 100% 30%;
+}

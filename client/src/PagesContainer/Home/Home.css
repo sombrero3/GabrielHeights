@@ -1,0 +1,21 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh !important;
+    max-height: fit-content;
+    
+    margin-bottom: -2px;
+}
+
+.home{
+    margin:auto;
+    position: relative;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 810px) {
+    .home-container{
+        min-height: 700px;
+    }
+}

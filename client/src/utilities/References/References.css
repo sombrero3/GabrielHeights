@@ -1,0 +1,40 @@
+.colz .colz-icon i {
+    padding: 8px;
+    font-size: 30px;
+    padding-left: 0px;
+    align-items: center;
+}
+
+.colz-icon img{
+        transition: 0.3s;
+}
+
+.colz-icon img:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp-icon img {
+    height: 40px;
+    width: 40px;
+
+}
+
+.phonecall-icon img {
+    height: 30px;
+    width: 30px;
+    background-color: var(--primary-orange);
+    border-radius: 60%;
+}
+
+.facebook-icon img {
+    height: 33px;
+    width: 33px;
+}
+
+.email-icon img {
+    height: 28px;
+    width: 28px;
+    background-color: var(--primary-gray);
+    border-radius: 60%;
+    margin-right: 6px;
+}
