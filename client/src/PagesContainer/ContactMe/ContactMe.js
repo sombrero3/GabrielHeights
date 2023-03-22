@@ -110,7 +110,6 @@ export default function ContactMe(props) {
                         </div>
                     </form>
                 </div>
-                {/* <BtnScrollUp /> */}
             </div>
         </div>
     );

@@ -2,10 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import ExpertiseList from '../../utilities/ExpertiseList'
 import Animations from '../../utilities/Animations'
 import ScrollService from '../../utilities/ScrollService'
-import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
-import './Expertise.css'
-// import '../Projects/SpecialtyProjects/SpecialtyProjects.css'
 import DisplayProjects from './DisplayProjects/DisplayProjects'
+import './Expertise.css'
 
 export default function Expertise(props) {
 
@@ -25,31 +23,29 @@ export default function Expertise(props) {
         ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
     //------------------------//
 
-    
+
     useEffect(() => {
-        
+
         const setProperties = () => {
             //----Set Refferences---// 
             outsideDisplayProjects.current.classList.add("display-projects-container-outside-display")
-            for (let i = 0; i < insideDisplayProjects.length; i++) {                
+            for (let i = 0; i < insideDisplayProjects.length; i++) {
                 insideDisplayProjects[i].current.classList.add("projects-inside-display")
             }
         }
 
-        const onClick = () => {            
+        const onClick = () => {
             //---Removing Projects Container Fade-In Animations class--//
             outsideDisplayProjects.current.classList.remove("active")
             for (let i = 0; i < insideDisplayProjects.length; i++) {
-                // if(insideDisplayProjects[i]){
                 insideDisplayProjects[i].current.classList.remove("active")
-                // }
-            }           
+            }
             //---Adding Projects Container Fade-In Animations class To trigger Animation--//
             setTimeout(() => {
                 outsideDisplayProjects.current.classList.add("active")
                 for (let i = 0; i < insideDisplayProjects.length; i++) {
                     insideDisplayProjects[i].current.classList.add("active")
-                }             
+                }
             }, 10)
         }
 
@@ -61,7 +57,7 @@ export default function Expertise(props) {
         }
 
         return () => {
-            
+
             for (let i = 0; i < buttonRef.length; i++) {
                 buttonRef[i].current.removeEventListener("mouseup", onClick);
             }
@@ -69,7 +65,7 @@ export default function Expertise(props) {
             //--Disable Main Container animation--//
             fadeInSubscription.unsubscribe();
         };
-    }, [fadeInSubscription,insideDisplayProjects,buttonRef]);
+    }, [fadeInSubscription, insideDisplayProjects, buttonRef]);
 
     const mapExpertise = () => {
         return ExpertiseList.map((specialty, index) => (
@@ -77,13 +73,12 @@ export default function Expertise(props) {
                 <div className={specialtySelcted === index ? 'expertise-specialty-container expertise-specialty-selcted' : 'expertise-specialty-container'}
                     ref={buttonRef[index]}
                     key={index}
-                    // onClick={() => ScrollService.scrollHandler.scrollToProjects(specialty.title)}>
                     onClick={() => {
                         setSpecialtySelcted(index)
-                        if(isMenuOpen){ ScrollService.scrollHandler.scrollToExpertise(); }
+                        if (isMenuOpen) { ScrollService.scrollHandler.scrollToExpertise(); }
                         setIsMenuOpen(isMenuOpen && index !== specialtySelcted ? isMenuOpen : !isMenuOpen)
                     }}
-                >                
+                >
                     <div>
                         <img className='expertise-img'
                             src={require('../../assets/Expertise/' + specialty.img)}
@@ -93,11 +88,8 @@ export default function Expertise(props) {
                     <div className='expertise-title'>
                         {specialty.title}
                     </div>
-                    {/* <div className='expertise-description'>
-                        {specialty.subTitle}
-                    </div>  */}
                     <div ref={insideDisplayProjects[index]}>
-                        {isMenuOpen ?
+                        {isMenuOpen &&
                             <div className='specialty-projects-container-inside-display'>
                                 {
                                     specialtySelcted === index
@@ -105,10 +97,8 @@ export default function Expertise(props) {
                                         : ""
                                 }
                             </div>
-                            :
-                            <div></div>
                         }
-                    </div>                                   
+                    </div>
                 </div>
             )
         ));
@@ -118,22 +108,19 @@ export default function Expertise(props) {
     return (
 
         <div id={props.id || ""} className='expertise-main-container fade-in'>
-            {/* <ScreenHeading title={"תחומי התמחות"} subHeading={"אלו הם תחומי ההתמחות"} /> */}
             <div className='container-column-center'>
                 <div className='expertise-container'>
                     {mapExpertise()}
                 </div>
                 <div ref={outsideDisplayProjects}>
-                    {/* <div className='specialty-projects-container-outside-display' ref={outsideDisplayProjects}> */}
                     <DisplayProjects index={specialtySelcted} />
                 </div>
                 <button
-                                className='btn expertise-btn'
-                                onClick={() => ScrollService.scrollHandler.scrollToExpertise()}>
-                                <span></span>
-                                {""}
-                                 בחר תחום התמחות{" "}
-                            </button>
+                    className='btn expertise-btn'
+                    onClick={() => ScrollService.scrollHandler.scrollToExpertise()}>
+                    <span></span>
+                    בחר תחום התמחות
+                </button>
             </div>
         </div>
     )

@@ -1,25 +1,7 @@
 import React from "react";
-// import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-// import ScrollService from "../../utilities/ScrollService";
-// import Animations from "../../utilities/Animations";
 import "./About.css";
 
 export default function About(props) {
-
-  // let fadeInScreenHandler = (screen) => {
-  //   if (screen.fadeInScreen !== props.id) return;
-  //   Animations.animations.fadeInScreen(props.id);
-  // };
-
-  // const fadeInSubscription =
-  //   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-  // useEffect(() => {
-  //   return () => {
-  //     /* UNSUBSCRIBE THE SUBSCRIPTIONS */
-  //     fadeInSubscription.unsubscribe();
-  //   };
-  // }, [fadeInSubscription]);
 
   const SCREEN_CONSTANTS = {
     description:
@@ -28,14 +10,12 @@ export default function About(props) {
   }
 
   return (
-    <div
-      // className="about-container screen-container fade-in"
+    <div      
       className="about-container screen-container"
       id={props.id || ""}
     >
     <div className="about-container-background"></div>
       <div className="about-parent">
-        {/* <ScreenHeading title={"אודותינו"} subHeading={"קצת עלינו"} /> */}
         <div className="about-card">
           <div className="about-details">
             <span className="about-description">
