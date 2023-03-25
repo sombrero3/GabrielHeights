@@ -23,7 +23,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image:  linear-gradient(to left, #080b0deb, #10151a9a);  
+  background-image:  linear-gradient(to left, #080b0dcd, #10151a9a); 
   z-index: -1;
 }
 
@@ -136,8 +136,8 @@
     margin-right: 10%;
   }
 
-  .profile-main-background-cover{
-    background-image:  linear-gradient(to left, #080b0dcd, #10151a9a);      
+  .profile-main-background-cover{      
+    background-image:  linear-gradient(to left, #080b0da4, #10151a72);
   }
 
   .profile-slogen{
