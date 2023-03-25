@@ -146,7 +146,7 @@
     .expertise-specialty-container:first-child:after {
         height: 1px ;
     }
-
+/**/
     .expertise-specialty-container:last-child:after {
         height: 0px ;
     }
