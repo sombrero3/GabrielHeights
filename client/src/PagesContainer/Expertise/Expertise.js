@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef, useMemo, useEffect } from 'react'
 import ExpertiseList from '../../utilities/ExpertiseList'
 import Animations from '../../utilities/Animations'
 import ScrollService from '../../utilities/ScrollService'
@@ -9,8 +9,11 @@ export default function Expertise(props) {
 
     const [specialtySelcted, setSpecialtySelcted] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const buttonRef = [useRef(), useRef(), useRef(), useRef(), useRef()]
-    const insideDisplayProjects = [useRef(), useRef(), useRef(), useRef(), useRef()]
+    
+    let buttonRefs = useMemo(()=>{return []},[])
+    let insideDisplayProjects = useMemo(()=>{return []},[])
+    buttonRefs = [useRef(), useRef(), useRef(), useRef(), useRef()]
+    insideDisplayProjects = [useRef(), useRef(), useRef(), useRef(), useRef()]
     const outsideDisplayProjects = useRef();
 
     //---Main Container Fade-In Animation-----//
@@ -19,8 +22,7 @@ export default function Expertise(props) {
         Animations.animations.fadeInScreen(props.id);
     };
 
-    const fadeInSubscription =
-        ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
     //------------------------//
 
 
@@ -52,26 +54,25 @@ export default function Expertise(props) {
         setProperties();
 
         //----Determain Which Event Will Trigger The Projects Container Fade-In Animation----// 
-        for (let i = 0; i < buttonRef.length; i++) {
-            buttonRef[i].current.addEventListener("mouseup", onClick);
+        for (let i = 0; i < buttonRefs.length; i++) {
+            buttonRefs[i].current.addEventListener("mouseup", onClick);
         }
 
         return () => {
-
-            for (let i = 0; i < buttonRef.length; i++) {
-                buttonRef[i].current.removeEventListener("mouseup", onClick);
+            for (let i = 0; i < buttonRefs.length; i++) {
+                buttonRefs[i].current.removeEventListener("mouseup", onClick);
             }
             /* UNSUBSCRIBE THE SUBSCRIPTIONS */
             //--Disable Main Container animation--//
             fadeInSubscription.unsubscribe();
         };
-    }, [fadeInSubscription, insideDisplayProjects, buttonRef]);
+    }, [fadeInSubscription, insideDisplayProjects, buttonRefs]);
 
     const mapExpertise = () => {
         return ExpertiseList.map((specialty, index) => (
             (
                 <div className={specialtySelcted === index ? 'expertise-specialty-container expertise-specialty-selcted' : 'expertise-specialty-container'}
-                    ref={buttonRef[index]}
+                    ref={buttonRefs[index]}
                     key={index}
                     onClick={() => {
                         setSpecialtySelcted(index)
@@ -89,14 +90,15 @@ export default function Expertise(props) {
                         {specialty.title}
                     </div>
                     <div ref={insideDisplayProjects[index]}>
-                        {isMenuOpen &&
+                        {isMenuOpen ?
                             <div className='specialty-projects-container-inside-display'>
                                 {
                                     specialtySelcted === index
                                         ? <DisplayProjects index={specialtySelcted} />
-                                        : ""
+                                        : null
                                 }
                             </div>
+                            : null
                         }
                     </div>
                 </div>
@@ -119,7 +121,7 @@ export default function Expertise(props) {
                     className='btn expertise-btn'
                     onClick={() => ScrollService.scrollHandler.scrollToExpertise()}>
                     <span></span>
-                    בחר תחום התמחות
+                    חזרה לתחומי התמחות
                 </button>
             </div>
         </div>

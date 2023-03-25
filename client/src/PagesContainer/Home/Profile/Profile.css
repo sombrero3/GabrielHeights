@@ -143,11 +143,10 @@
   .profile-slogen{
     width: 420px;
   }
-}
 
-@media only screen and (max-width: 655px) {
-  /* .profile-slogen{
-    width: 90%;
+  /* .profile-main-background-img{
+    background-size: 180% 150%;
+    background-position: center;
   } */
 }
 
@@ -159,6 +158,7 @@
   .profile-slogen {
     font-size: 20px;  
   }
+ 
   .profile-call-us{   
     font-size: 18px;
   }

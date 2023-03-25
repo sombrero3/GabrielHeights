@@ -210,12 +210,25 @@ body ::-webkit-scrollbar-thumb {
 
 /*Animations*/
 
+/*Nav Animation*/
 @keyframes slideLeft{
   0%{
     transform: translateX(500px);
   }
   100%{
     transform: translateX(0px);
+  }
+}
+
+/*Expertise Animation*/
+@keyframes openDisplay{
+  from {
+      opacity: 0;
+      transform: translateY(-200px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
   }
 }
 

@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     background-color: var(--primary-blue);
-    border-radius: 0 0 60px 60px;
+    /* border-radius: 0 0 60px 60px; */
     box-shadow: 0px 4px 4px 0px #202011;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .expertise-specialty-container:first-child:after {
-    height: 0 !important;
+    height: 0 ;
 }
 
 .expertise-specialty-selcted {
@@ -71,29 +71,7 @@
 }
 
 .display-projects-container-outside-display.active {
-    animation: transitionFadeIn 0.75s;
-}
-
-@keyframes transitionFadeIn {
-    from {
-        opacity: 0;
-        transform: trnslateY(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: trnslateY(0);
-    }
-}
-
-@keyframes transitionSlide {
-    from {
-        transform: translateY(-200px);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
+    animation:  openDisplay 1s;
 }
 
 
@@ -103,23 +81,24 @@
         content: '';
         height: 30%;
         /* //You can change this if you want smaller/bigger borders */
-        width: 1px;
+        width: 2px;
 
         position: absolute;
         right: 0;
         top: 35%;
         /* // If you want to set a smaller height and center it, change this value */
 
-        background-color: var(--primary-gray);
+        background-color: #cdcfcf25;
         /* // The color of your border */
     }
 }
 
 @media screen and (max-width: 540px) {
-
+    
     .expertise-container {
         width: 100%;
         flex-direction: column;
+        border-radius: 0 0 60px 60px;
     }
 
     .display-projects-container-outside-display {
@@ -134,8 +113,7 @@
     .projects-inside-display {}
 
     .projects-inside-display.active {
-
-        animation: transitionSlide 0.75s, transitionFadeIn 1000ms;
+        animation:  openDisplay 1s;
     }
 
     .specialty-projects-title {
@@ -144,5 +122,32 @@
 
     .expertise-btn {
         display: none;
+    }
+
+    .expertise-specialty-container{
+        
+        padding: 30px 20px;
+    }
+    
+    .expertise-specialty-container:after {        
+        content: '';
+        height: 1px;
+        /* //You can change this if you want smaller/bigger borders */
+        width: 10%;
+
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        /* // If you want to set a smaller height and center it, change this value */
+
+        background-color: #cdcfcf25;
+        /* // The color of your border */
+    }
+    .expertise-specialty-container:first-child:after {
+        height: 1px ;
+    }
+
+    .expertise-specialty-container:last-child:after {
+        height: 0px ;
     }
 }
