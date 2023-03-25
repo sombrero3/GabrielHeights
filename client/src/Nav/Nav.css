@@ -16,12 +16,12 @@
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
     .header-container {
-            padding-top: 36px;
+            padding-top: 40px;
 
     }
 
     .header-parent{
-        margin-top: -10px;
+        margin-top: -14px;
     }
 }
 .header-container .header-parent {
