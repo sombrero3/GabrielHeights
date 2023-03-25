@@ -87,6 +87,7 @@
   font-size: 30px;
   color: white;
   font-family: "Ibm light";
+  min-width: 130px;
 }
 
 .profile-phone-number{
@@ -176,9 +177,9 @@
     width: 260px;
   }
 
-  .profile-call-us{
+  /* .profile-call-us{
     width: 125px;    
-  }
+  } */
 
   .profile-slogen {
    width: 90%;

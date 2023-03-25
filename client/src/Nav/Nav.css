@@ -16,8 +16,7 @@
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
     .header-container {
-            padding-top: 46px;
-
+        padding-top: 46px;
     }
 
     .header-parent{
