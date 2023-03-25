@@ -12,7 +12,7 @@
     
     background-image: url('../../assets/About/IMG-6885.PNG');
     background-position: top;
-    background-attachment: fixed !important;
+    /* background-attachment: fixed !important; */
     background-repeat: no-repeat;
     background-size: 100% 300%;    
     -webkit-background-size: 100% 300%;
@@ -83,13 +83,18 @@
 
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
+
     .about-container {
         background-attachment: none !important;
+        background-image:  linear-gradient(to left, #080b0da4, #d51402e7);
     }
 }
   
 @supports not (-webkit-touch-callout: none) {
     /* CSS for other than iOS devices */ 
+    .about-container {
+        background-attachment: fixed !important;
+    }
 }
 @media only screen and (max-width: 898px) {
     .about-container {
