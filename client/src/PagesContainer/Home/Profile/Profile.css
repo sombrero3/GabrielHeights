@@ -84,10 +84,10 @@
 }
 
 .profile-call-us {
-  font-size: 30px;
+  font-size: 26px;
   color: white;
   font-family: "Ibm light";
-  min-width: 125px;
+  width: 300px;
 }
 
 .profile-phone-number{
@@ -99,6 +99,7 @@
   color: var(--primary-gray);
   font-family: 'Fredoka';
   font-weight: 600;
+  font-size: 30px;
   letter-spacing: 0.2rem;
 }
 
@@ -124,18 +125,12 @@
   margin-bottom: 24px;
 }
 
-.highlighted-text {  
-  color: var(--primary-gray);
-  font-family: 'Fredoka';
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-}
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
-  .profile-call-us{   
+ /* .profile-call-us{   
    min-width: 125px;
   }
-}
+} */
 @media only screen and (max-width: 810px) {
   .profile-details {
     margin-left: 10%;
@@ -164,9 +159,12 @@
   .profile-slogen {
     font-size: 20px;  
   }
- 
+  .profile-phone-number{
+    font-size: 18px;
+  }
   .profile-call-us{   
     font-size: 18px;
+    width: 150px;
   }
 }
 
