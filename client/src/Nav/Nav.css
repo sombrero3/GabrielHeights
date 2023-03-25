@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     height: fit-content;
-    min-height: -webkit-min-content;
     color: var(--primary-gray);
     background-color: var(--primary-dark-blue); 
     box-shadow: 0 0 5px  var(--primary-dark-blue);
@@ -64,9 +63,6 @@
 }
 
 @media only screen and (max-width: 990px) {
-    .header-container {
-        padding-top: 40px;
-    }
     .header-hamburger {
         position: fixed;
         top: 0;
