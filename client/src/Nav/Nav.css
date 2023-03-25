@@ -13,7 +13,13 @@
     -webkit-transition: .3s ;
     -o-transition: .3s;
 }
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    .header-container {
+            padding-top: 30px;
 
+    }
+}
 .header-container .header-parent {
     display: flex;
     align-items: center;
