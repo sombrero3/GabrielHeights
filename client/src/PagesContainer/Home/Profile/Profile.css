@@ -128,7 +128,13 @@
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
   .profile-call-us{   
-   width: 180px;
+   width: 300px;
+  }
+
+  @media only screen and (max-width: 810px) {
+    .profile-call-us{   
+      width: 180px;
+     }
   }
 }
 @media only screen and (max-width: 810px) {
