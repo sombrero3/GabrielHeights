@@ -127,14 +127,14 @@
 
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
-  .profile-call-us{   
+  /* .profile-call-us{   
    width: 300px;
-  }
+  } */
 
   @media only screen and (max-width: 810px) {
     .profile-call-us{   
-      width: 300px;
-     }
+      width: 500px;
+    }
   }
 }
 @media only screen and (max-width: 810px) {
@@ -150,11 +150,6 @@
   .profile-slogen{
     width: 420px;
   }
-
-  /* .profile-main-background-img{
-    background-size: 180% 150%;
-    background-position: center;
-  } */
 }
 
 @media only screen and (max-width: 580px) {
