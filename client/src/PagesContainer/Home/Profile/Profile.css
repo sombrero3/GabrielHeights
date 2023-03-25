@@ -125,12 +125,12 @@
   margin-bottom: 24px;
 }
 
-/* @supports (-webkit-touch-callout: none) {
+@supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
- /* .profile-call-us{   
-   min-width: 125px;
+  .profile-call-us{   
+   width: 180px;
   }
-} */
+}
 @media only screen and (max-width: 810px) {
   .profile-details {
     margin-left: 10%;
