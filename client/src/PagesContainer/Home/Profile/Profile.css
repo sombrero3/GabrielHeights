@@ -133,7 +133,7 @@
 
   @media only screen and (max-width: 810px) {
     .profile-call-us{   
-      width: 500px;
+      width: 300px !important;
     }
   }
 }
