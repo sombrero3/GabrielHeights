@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../utilities/commonUtils";
 import ScrollService from "../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +11,6 @@ export default function Nav() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
   const [burgerIsClicked, setBurgerIsClicked] = useState(false);
-
 
   const updateCurrentScreen = (currentScreen) => {
     if (!currentScreen || !currentScreen.screenInView) return;
@@ -58,11 +57,7 @@ export default function Nav() {
     setBurgerIsClicked(false);
   };
 
-  useEffect(() => {
-    return () => {
-      currentScreenSubscription.unsubscribe();
-    };
-  }, [currentScreenSubscription]);
+  
 
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -71,7 +66,7 @@ export default function Nav() {
     );
   }
 
-  const selectCurrentHeaderOption = () => {
+  const selectCurrentHeaderOption = useCallback(() => {
     const home = document.querySelector('#Home');
     if (isInViewport(home)) {
       if (selectedScreen !== 0) {
@@ -104,7 +99,7 @@ export default function Nav() {
       }
       return;
     }
-  }
+  },[selectedScreen]);
 
   document.addEventListener('scroll', _.throttle(selectCurrentHeaderOption, 1000, { trailing: true }), {
     passive: true
@@ -125,7 +120,14 @@ export default function Nav() {
       lastScrollTop = scrollTop;
     })
 
-  })
+    return () => {
+      currentScreenSubscription.unsubscribe();
+    };
+  },[currentScreenSubscription]);
+
+  // useEffect(() => {
+    
+  // }, );
   return (
     <div
       id='Header'

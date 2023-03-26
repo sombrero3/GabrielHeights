@@ -16,8 +16,7 @@ export default function PagesContainer() {
     }
     
     return (
-        <div className='pages-container'>
-        {/* <div className='main-side-snepling-img'></div> */}
+        <div className='pages-container'>       
             {mapAllScreens()}
         </div>
     )
