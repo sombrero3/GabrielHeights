@@ -1,22 +1,23 @@
-.colz .colz-icon i {
-    padding: 8px;
-    font-size: 30px;
-    padding-left: 0px;
+.references-container{        
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin-top: 2px;
 }
 
-.colz-icon img{
-        transition: 0.3s;
+.references-container img {
+    transition: 0.3s;
 }
 
-.colz-icon img:hover {
+.references-container img:hover {
     transform: scale(1.2);
 }
 
 .whatsapp-icon img {
     height: 40px;
     width: 40px;
-
 }
 
 .phonecall-icon img {

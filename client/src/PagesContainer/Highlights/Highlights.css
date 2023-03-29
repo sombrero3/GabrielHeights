@@ -46,7 +46,7 @@
     width: 50%;
     height: 70%;
     position: relative;
-    right:10%;
+    right:4%;
 }
 
 
@@ -63,7 +63,8 @@
     }
 
     .highlights-img{
-        right: 0;        
+        right: 0;
+        left: 2%;        
     }
 
     .highlight {

@@ -157,9 +157,12 @@ export default function Nav() {
         >
           {getHeaderOptions()}
         </div>
-        <div className="header-logo">
+        <div className="header-logo-container">
           <References />
-          <span className="nav-logo">גבריאל</span>
+          <div className="header-logo">
+          <span className="header-logo-title">גבריאל</span>
+          <span className="header-logo-sub">עבודות גובה</span>
+          </div>
         </div>
       </div>
     </div>

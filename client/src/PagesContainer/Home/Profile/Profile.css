@@ -23,7 +23,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image:  linear-gradient(to left, #080b0dcd, #10151a9a); 
+  background-image:  linear-gradient(to left, #080b0d9c, #10151a56); 
   z-index: -1;
 }
 
@@ -125,6 +125,9 @@
   margin-bottom: 24px;
 }
 
+.profile-btn{
+  background-color: rgba(0, 0, 0, 0.268);
+}
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
   /* .profile-call-us{   

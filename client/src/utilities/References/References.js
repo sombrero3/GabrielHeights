@@ -7,7 +7,7 @@ import './References.css'
 export default function References(){
 
     return (
-        <div className='colz-icon'>
+        <div className='references-container'>
              <a href='#ContactMe'>
               <i className='email-icon'>
                 <img src={email} alt="phone call icon" />

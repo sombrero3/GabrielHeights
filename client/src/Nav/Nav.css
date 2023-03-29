@@ -23,20 +23,39 @@
         margin-top: -22px;
     }
 }
-.header-container .header-parent {
+.header-parent {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     height: 100%;
     width:80%; 
 }
 
-.header-logo {
-    font-size: 30px;
+.header-logo-container {
+    
     font-family: "Secular";
     color: var(--primary-orange);
     display: flex;
     flex-direction: row;
+}
+
+.header-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 40px;
+    
+}
+.header-logo-title{
+    font-size: 30px;
+    height: fit-content;
+    margin-top: -6px;
+}
+.header-logo-sub{
+    margin-top: -17px;
+    color: var(--primary-gray);
 }
 
 .header-options {
@@ -83,6 +102,8 @@
 
     .header-parent {
         justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .header-options {
@@ -121,7 +142,7 @@
     }
 
     .selected-header-option {
-        color: var(--primary-orange);
+        color: var(--yellow);
     }
 
     .header-hamburger-bars {
@@ -137,4 +158,3 @@
         pointer-events: none;
     }
 }
-
