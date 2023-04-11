@@ -142,7 +142,7 @@
     }
 
     .selected-header-option {
-        color: var(--yellow);
+        color: var(--primary-orange);
     }
 
     .header-hamburger-bars {

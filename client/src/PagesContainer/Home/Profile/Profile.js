@@ -13,7 +13,7 @@ function Profile() {
                         <div className='profile-details-background'></div>
                         <div className="profile-call-us">
                             <span>
-                                צלצלו אלינו <span className='profile-phone-number'>050-5889675</span>
+                                צלצלו אלינו <span className='profile-phone-number'>050-2006233</span>
                             </span>
                         </div>
                         <div className='profile-main-text'>

@@ -8,7 +8,7 @@ import Highlights from "../PagesContainer/Highlights/Highlights";
 export const TOTAL_SCREENS = [
   {
     screen_name: "Home",
-    screen_tag: "דף בית",
+    screen_tag: "ראשי",
     component: Home,
   },
   {

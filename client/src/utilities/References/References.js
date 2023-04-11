@@ -18,12 +18,12 @@ export default function References(){
                 <img src={facebook} alt="facebook icon" />
               </i>
             </a>
-            <a href="https://wa.me/+972558870528">
+            <a href="https://wa.me/+972502006233">
               <i className='whatsapp-icon'>
                 <img src={whatsapp} alt="whatsapp icon" />
               </i>
             </a>
-            <a href='tel:+972558870528'>
+            <a href='tel:+972502006233'>
               <i className='phonecall-icon'>
                 <img src={phonecall} alt="phone call icon" />
               </i>
