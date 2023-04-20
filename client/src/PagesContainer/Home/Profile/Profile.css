@@ -146,6 +146,8 @@
   background-color: rgba(0, 0, 0, 0.268);
   width: fit-content;
   padding-right: 6px;
+  display: flex;
+  flex-direction: row;
 }
 
 .profile-phone-logo {
