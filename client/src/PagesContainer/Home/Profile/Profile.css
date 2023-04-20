@@ -131,23 +131,25 @@
 
 .profile-buttons-row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .profile-mail-btn {
   background-color: rgba(0, 0, 0, 0.268);  
-  width: 170px;
+  width: 100%;
 }
 
 .profile-call-btn {
   background-color: rgba(0, 0, 0, 0.268);
-  width: fit-content;
+  width: 100%;
   padding-right: 6px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .profile-phone-logo {
@@ -155,7 +157,8 @@
   width: 22px;
   background-color: var(--primary-orange);
   border-radius: 60%;
-  margin-bottom: 2px; 
+  margin-bottom: 2px;
+  margin-left: 10px; 
   /* margin-right: -16px;  */
 }
 

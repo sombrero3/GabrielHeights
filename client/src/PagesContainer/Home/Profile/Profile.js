@@ -32,21 +32,21 @@ function Profile() {
                         <div className='profile-buttons-row'>                            
                             <div className='profile-options'>
                                 <button
-                                    className='btn profile-mail-btn'
-                                    onClick={() => ScrollService.scrollHandler.scrollToContactMe()}>
-                                    <span></span>
-                                    {""}
-                                    שליחת מייל{" "}                                    
-                                </button>
-                            </div>
-                            <div className='profile-options'>
-                                <button
                                     className='btn profile-call-btn'
                                     onClick={() => ScrollService.scrollHandler.scrollToContactMe()}>
                                     <span></span>
                                     {""}
                                     050-2006233{" "}
                                     <img className='profile-phone-logo' src={phonecall} alt="phone call icon" />
+                                </button>
+                            </div>
+                            <div className='profile-options'>
+                                <button
+                                    className='btn profile-mail-btn'
+                                    onClick={() => ScrollService.scrollHandler.scrollToContactMe()}>
+                                    <span></span>
+                                    {""}
+                                    שליחת מייל{" "}                                    
                                 </button>
                             </div>
                         </div>
