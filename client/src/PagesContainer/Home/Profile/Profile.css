@@ -223,3 +223,10 @@
     width: 90%;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .profile-details {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
