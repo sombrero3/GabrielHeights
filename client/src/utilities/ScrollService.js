@@ -27,13 +27,14 @@ export default class ScrollService {
     if (!homeScreen) return;
       
     homeScreen.scrollIntoView({ behavior: "smooth" });
-  };
+  }
 
   scrollToExpertise = () =>{
     let specialtyScreen = document.getElementById("Expertise");
     if (!specialtyScreen) return;
       
-    specialtyScreen.scrollIntoView({ behavior: "smooth" });
+    specialtyScreen.scrollIntoView({behavior: "smooth" });
+    document.getElementById('Header').style.top = '-80px';   
   }
 
   /* CHECK IF ELEMENT IS IN VIEW .this simply means if the document appears fully on the screen or not */
