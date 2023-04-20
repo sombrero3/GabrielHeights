@@ -133,18 +133,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+  max-width: 400px;
 }
 
 .profile-mail-btn {
-  background-color: rgba(0, 0, 0, 0.268);
-  width: 160px;
-  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.268);  
+  width: 170px;
 }
 
 .profile-call-btn {
   background-color: rgba(0, 0, 0, 0.268);
-  width: 200px;
-  padding-right: 4px;
+  width: fit-content;
+  padding-right: 6px;
 }
 
 .profile-phone-logo {
