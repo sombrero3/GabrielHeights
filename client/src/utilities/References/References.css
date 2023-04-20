@@ -32,10 +32,16 @@
     width: 33px;
 }
 
+.instagram-icon img {
+    height: 38px;
+    width: 38px;
+    margin-right: 2px;
+}
+
 .email-icon img {
     height: 28px;
     width: 28px;
     background-color: var(--primary-gray);
     border-radius: 60%;
-    margin-right: 6px;
+    margin-right: 4px;
 }

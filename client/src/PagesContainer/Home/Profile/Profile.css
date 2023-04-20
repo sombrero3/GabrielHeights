@@ -1,4 +1,4 @@
-.profile-main-container{
+.profile-main-container {
   width: 100%;
   height: 100%;
   text-align: right;
@@ -19,15 +19,15 @@
   justify-content: right;
 }
 
-.profile-main-background-cover{
+.profile-main-background-cover {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image:  linear-gradient(to left, #080b0d9c, #10151a56); 
+  background-image: linear-gradient(to left, #080b0d9c, #10151a56);
   z-index: -1;
 }
 
-.profile-main-background-img{
+.profile-main-background-img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -36,7 +36,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   /* Animation for changing home-page background */
   animation: background-change 8s ease-in-out;
   animation-direction: alternate;
@@ -63,11 +63,15 @@
   -o-animation-play-state: running;
 }
 
-@keyframes background-change{
-  0%,38%{
+@keyframes background-change {
+
+  0%,
+  38% {
     background-image: url("../../../assets/Home/herness.jpg");
   }
-  58%,100%{ 
+
+  58%,
+  100% {
     background-image: url("../../../assets/Home/rooftop.JPG");
   }
 }
@@ -90,7 +94,7 @@
   width: 300px;
 }
 
-.profile-phone-number{
+.profile-phone-number {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -118,39 +122,62 @@
 }
 
 .profile-slogen {
-  font-size: 24px;  
+  font-size: 24px;
   width: 60%;
-  color: var(--primary-gray);  
+  color: var(--primary-gray);
   font-family: "Ibm light";
   margin-bottom: 24px;
 }
 
-.profile-btn{
-  background-color: rgba(0, 0, 0, 0.268);
+.profile-buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+.profile-mail-btn {
+  background-color: rgba(0, 0, 0, 0.268);
+  width: 180px;
+  margin-right: 20px;
+}
+
+.profile-call-btn {
+  background-color: rgba(0, 0, 0, 0.268);
+  width: 180px;
+}
+
+.profile-phone-logo {
+  height: 22px;
+  width: 22px;
+  background-color: var(--primary-orange);
+  border-radius: 60%;
+  margin-bottom: 2px;  
+}
+
 @supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */ 
+  /* CSS specific to iOS devices */
   /* .profile-call-us{   
    width: 300px;
   } */
 
   @media only screen and (max-width: 810px) {
-    .profile-call-us{   
+    .profile-call-us {
       width: 300px !important;
     }
   }
 }
+
 @media only screen and (max-width: 810px) {
   .profile-details {
     margin-left: 10%;
     margin-right: 10%;
   }
 
-  .profile-main-background-cover{      
-    background-image:  linear-gradient(to left, #080b0da4, #10151a72);
+  .profile-main-background-cover {
+    background-image: linear-gradient(to left, #080b0da4, #10151a72);
   }
 
-  .profile-slogen{
+  .profile-slogen {
     width: 420px;
   }
 }
@@ -159,21 +186,23 @@
   .profile-main-text h1 {
     font-size: 44px;
   }
-  
+
   .profile-slogen {
-    font-size: 20px;  
+    font-size: 20px;
   }
-  .profile-phone-number{
+
+  .profile-phone-number {
     font-size: 18px;
   }
-  .profile-call-us{   
+
+  .profile-call-us {
     font-size: 18px;
     width: 150px;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .profile-details{
+  .profile-details {
     width: 100%;
     position: relative;
     justify-content: flex-end;
@@ -189,6 +218,6 @@
   } */
 
   .profile-slogen {
-   width: 90%;
+    width: 90%;
   }
 }
