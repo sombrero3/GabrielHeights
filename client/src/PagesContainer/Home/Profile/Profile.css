@@ -137,13 +137,14 @@
 
 .profile-mail-btn {
   background-color: rgba(0, 0, 0, 0.268);
-  width: 180px;
+  width: 160px;
   margin-right: 20px;
 }
 
 .profile-call-btn {
   background-color: rgba(0, 0, 0, 0.268);
-  width: 180px;
+  width: 170px;
+  padding-right: 4px;
 }
 
 .profile-phone-logo {
@@ -151,7 +152,8 @@
   width: 22px;
   background-color: var(--primary-orange);
   border-radius: 60%;
-  margin-bottom: 2px;  
+  margin-bottom: 2px; 
+  /* margin-right: -16px;  */
 }
 
 @supports (-webkit-touch-callout: none) {
